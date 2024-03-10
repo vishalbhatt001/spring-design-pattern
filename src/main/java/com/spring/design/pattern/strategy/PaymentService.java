@@ -16,7 +16,6 @@ public class PaymentService {
     }
 
     public String processPayment(String paymentMethod, double amount) {
-        System.out.print("***paymentMethod" + paymentMethod);
         PaymentStrategy strategy = paymentStrategies.get(paymentMethod);
         if (strategy == null) {
             throw new IllegalArgumentException("Unsupported payment method: " + paymentMethod);
